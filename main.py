@@ -1,12 +1,13 @@
 from flask import Flask, jsonify
 import os
+from config import GAVNO
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return jsonify({"Choo Choo": "Welcome to your GAVNO app 🚅"})
+    return jsonify({"Choo Choo": f"Welcome to your {GAVNO} app 🚅"})
 
 
 if __name__ == '__main__':
