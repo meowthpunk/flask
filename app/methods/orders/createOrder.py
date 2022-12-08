@@ -66,8 +66,8 @@ def createOrder(request):
 
         total_cart_price += get_dish.price * dish["counter"]
 
-    ConsoleLogs.PRINT(f"{total_cart_price = }")
-    ConsoleLogs.PRINT(f"{restaurant.free_delivery_price = }")
+    ConsoleLogs.PRINT(f"{total_cart_price }")
+    ConsoleLogs.PRINT(f"{restaurant.free_delivery_price }")
 
     order.delivery_fee = restaurant.delivery_fee if ((order.delivery_type == "DELIVERY") and (total_cart_price < restaurant.free_delivery_price)) else 0
     db.session.commit()

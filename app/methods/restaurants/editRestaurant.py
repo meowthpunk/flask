@@ -62,7 +62,7 @@ def editRestaurant(restaurant, logo):
         if restaurantGet != None:
             if logo_flag:
                 path = fileSave(logo, 'restaurant', f'{restaurantGet.id}.png')
-                print(f'{path=}')
+                print(f'{path}')
                 restaurantGet.setLogo(path)
 
             restaurantGet.edit(restaurant)

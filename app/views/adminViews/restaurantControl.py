@@ -77,10 +77,10 @@ def editRestaurant():
 
     try:
         logo = request.files["logo"]
-        print(f'{logo=}')
+        print(f'{logo}')
     except:
         logo = None
-        print(f'{logo=}')
+        print(f'{logo}')
 
     restaurant = json.loads(request.form["restaurant"])
 

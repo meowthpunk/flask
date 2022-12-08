@@ -41,7 +41,7 @@ def setBannerToRestaurant(restaurant, banner):
         if restaurantGet != None:
             if banner_flag:
                 path = fileSave(banner, 'banners', f'{restaurantGet.id}.png')
-                print(f'{path=}')
+                print(f'{path}')
                 restaurantGet.setBanner(path)
 
             restaurantGet.edit(restaurant)
