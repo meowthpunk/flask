@@ -114,6 +114,6 @@ class Restaurant(db.Model):
     def delete(self):
         for category in self.categories:
             category.delete()
-        # self.delete()
+
         db.session.delete(self)
         db.session.commit()

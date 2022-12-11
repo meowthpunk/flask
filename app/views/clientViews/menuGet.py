@@ -1,8 +1,8 @@
+from flask import request
+
 from app import app
 from app.methods import getMenu as getMenuMethod
 from app.console.console_logs import ConsoleLogs, serverDecorator
-
-from flask import request
 
 @app.route('/getMenu/<restaurant_link>', methods=['GET'])
 @serverDecorator("GET_MENU")

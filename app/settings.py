@@ -11,7 +11,3 @@ class Settings():
     VALID_EXTENTIONS_FOR_REST_BANNER = {'png'}
     SAVE_EXTENTION_FOR_REST_BANNER = 'png'
     VALID_SIZE_FOR_REST_BANNER = [700, 320]
-
-    # # This will create a file in <app> FOLDER
-    # SQLALCHEMY_DATABASE_URI = 'sqlite:///data.db'
-    # SQLALCHEMY_TRACK_MODIFICATIONS = False

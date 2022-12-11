@@ -1,3 +1,8 @@
+import json
+import time
+
+from flask import request
+
 from app import app
 
 from app.methods import createRestaurant as createRestaurantMethod
@@ -8,16 +13,8 @@ from app.methods import setBannerToRestaurant as setBannerToRestaurantMethod
 from app.methods import deleteBannerToRestaurant as deleteBannerToRestaurantMethod
 
 from app.methods import checkAPIkey
-from flask import request
-from app.console import ConsoleLogs
 
-import app.methods as methods
 
-import json
-
-import time
-
-# from app.methods import getMenu as getMenuMethod
 
 @app.route('/dashboard/deleteRestaurant/<id>', methods=['POST'])
 def deleteRestaurant(id):
@@ -27,7 +24,6 @@ def deleteRestaurant(id):
         return {"ok": True, "error": verification["error"]}
 
     dump = deleteRestaurantMethod({"id": id})
-    # dump = {"errors": {}, "id": id}
 
     return {"ok": True, "dump": dump}
 

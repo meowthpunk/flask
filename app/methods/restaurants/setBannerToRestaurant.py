@@ -1,6 +1,6 @@
+from PIL import Image
 
 from app.models.Restaurant import Restaurant
-from PIL import Image
 from app.settings import Settings
 
 from app import db

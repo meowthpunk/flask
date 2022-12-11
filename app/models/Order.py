@@ -1,6 +1,4 @@
 from app import db
-# from .OrderDish import order_dish
-# from .OrderRestaurant import order_restaurant
 from . import Dish
 
 class Order(db.Model):

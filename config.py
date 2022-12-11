@@ -1,1 +1,0 @@
-GAVNO = "SOBAKA PIZDAaaa"

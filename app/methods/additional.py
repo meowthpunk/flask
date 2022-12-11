@@ -1,9 +1,11 @@
-from app.config import API_KEY
 import re
 import os
+
 from werkzeug.utils import secure_filename
-from app import app
 from datetime import datetime,timezone
+
+from app.config import API_KEY
+from app import app
 
 def getUTCTime():
     now_utc = datetime.now(timezone.utc)
@@ -51,8 +53,6 @@ def allowedFile(filename, extention):
     return ('.' in filename) and (filename.rsplit('.', 1)[1].lower() in extention)
 
 def fileSave(file, directory, filename):
-    #
-    # filename = secure_filename(file.filename)
 
     path = os.path.join(app.config['UPLOAD_FOLDER'], directory + filename)
     path = f'images/{directory}/{filename}'

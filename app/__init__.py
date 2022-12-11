@@ -22,9 +22,3 @@ db = SQLAlchemy(app)
 
 Migrate(app, db)
 from app import views, models, socket_views
-
-
-# def runServer(host=host, port=port):
-#     ConsoleLogs.START(host, port)
-#     db.create_all()
-#     socket.run(app, host=host, port=port)

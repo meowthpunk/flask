@@ -41,6 +41,3 @@ def changeIngrList(dish_id, new_ingredient_list):
 
 
     return dish.getIngredients()
-
-
-# print(dish.getIngredients())

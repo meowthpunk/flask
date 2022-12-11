@@ -7,21 +7,12 @@ class Customer(db.Model):
     name = db.Column(db.String)
     phone = db.Column(db.String)
     address = db.relationship('Address', backref='Customer', uselist=False)
-    # address_id = db.Column(db.Integer, db.ForeignKey('address.id'))
-
     orders = db.relationship('Order', backref='Customer')
 
     def __init__(self, name, phone):
         self.name = name
         self.phone = phone
 
-        # db.session.add(self)
-        # db.session.commit()
-
-
-    # def setEmail(self, email):
-    #     self.email = email
-        # db.session.commit()
 
     def createOrder(self):
         order = Order.Order(self.id)

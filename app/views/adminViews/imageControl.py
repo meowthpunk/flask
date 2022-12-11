@@ -1,16 +1,13 @@
-from flask import send_from_directory, url_for, send_file
+import json
+import time
 import os
+
+from flask import send_from_directory, url_for, send_file, request
+
 from app import app
 from app import db
 
-import json
-import time
-
-from flask import request
-
 basedir = os.path.abspath(os.path.dirname(""))
-# path = os.path.join(basedir, "app", app.config["UPLOAD_FOLDER"])
-
 
 @app.route('/images/banners/<filename>', methods=['GET'])
 def getBanner(filename):

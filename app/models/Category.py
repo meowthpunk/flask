@@ -20,8 +20,6 @@ class Category(db.Model):
         db.session.commit()
 
     def create(category):
-        # title = parseTitle(title)
-
         isExisted = db.session.query(Category).filter(
             (Category.title == category["title"]) &
             (Category.restaurant_id == category["restaurant_id"])

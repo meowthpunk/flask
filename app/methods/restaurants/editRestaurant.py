@@ -1,5 +1,4 @@
 from app.models.Restaurant import Restaurant
-# Restaurant = models.Restaurant.Restaurant
 from PIL import Image
 from app.settings import Settings
 
@@ -11,16 +10,6 @@ def editRestaurant(restaurant, logo):
 
     if "id" not in restaurant:
         errors["id"] = "NOT_EXISTED"
-
-    # if "title" not in restaurant:
-    #     errors["title"] = "NOT_EXISTED"
-    #
-    # if "link" not in restaurant:
-    #     errors["link"] = "NOT_EXISTED"
-    # else:
-    #     if isPathValid(restaurant["link"]) != True:
-    #         errors["link"] = "NOT_VALID_PATH"
-
 
     if "color" in restaurant:
         if isHexColorValid(restaurant["color"]) == False:
@@ -70,19 +59,6 @@ def editRestaurant(restaurant, logo):
         else:
             errors["main"] = "NOT_EXISTED"
             restaurant_info = restaurant
-
-
-        # try:
-        #
-        #
-        #     if logo_flag:
-        #         path = fileSave(logo, 'restaurant', f'{restaurant.id}.png')
-        #
-        #         restaurant.setLogo(path)
-        #
-        #     restaurant_info = restaurant.getInfo()
-        #
-        # except:
 
 
     return {"restaurant": restaurant_info, "errors": errors}

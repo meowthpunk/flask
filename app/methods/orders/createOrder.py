@@ -47,8 +47,6 @@ def createOrder(request):
         db.session.add(address)
         db.session.commit()
 
-    # delivery_fee = restaurant.delivery_fee if ()
-
     order = Order(customer.id, restaurant.id, comment, delivery_type, secret_key)
 
 

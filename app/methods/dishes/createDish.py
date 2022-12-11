@@ -10,13 +10,6 @@ from app.methods.restaurants import isExistedRestaurant
 
 from app.methods import allowedFile, fileSave
 
-
-
-# from app import db
-# Dish = models.Dish.Dish
-# Category = models.Category.Category
-# Ingredient = models.Ingredient.Ingredient
-
 def createDish(dish, photo):
     errors = {}
 

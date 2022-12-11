@@ -1,13 +1,15 @@
+import json
+import time
+
+from flask import request
+
 from app import app
 
 from app.methods import checkAPIkey
 
 from app.methods import getMenu as getMenuMethod
 
-import json
-import time
 
-from flask import request
 
 
 ### |-------| DISH CONTROL |-------| ###

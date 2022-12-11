@@ -1,6 +1,5 @@
 from app import db
 from .DishIngredient import dish_ingredient
-# from .OrderDish import order_dish
 from app.methods import parseTitle
 
 class Dish(db.Model):
@@ -9,7 +8,6 @@ class Dish(db.Model):
 
     title = db.Column(db.String)
     price = db.Column(db.Integer)
-    # price2 = db.Column(db.Integer)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
 
     photo = db.Column(db.String)
@@ -75,13 +73,6 @@ class Dish(db.Model):
         return ingredients
 
     def create(dish):
-        # try:
-        #     dish = Dish(dish)
-        # except:
-        #     return{"restaurant": dish,"error": "ALREADY_EXISTED"}
-        #
-        # return dish
-
         isExisted = db.session.query(Dish).filter(
             (Dish.title == dish["title"]) &
             (Dish.category_id == dish["category_id"])

@@ -10,10 +10,6 @@ from app.methods import getAnotherRestaurants
 
 
 def getOrder(order_id, secret_key):
-    # order_id = request["order_id"]
-
-
-
     order = db.session.query(Order).filter(Order.id == order_id).first()
 
     if (secret_key != order.secret_key):

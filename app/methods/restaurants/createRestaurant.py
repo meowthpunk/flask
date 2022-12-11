@@ -1,5 +1,4 @@
 from app.models.Restaurant import Restaurant
-# Restaurant = models.Restaurant.Restaurant
 from PIL import Image
 from app.settings import Settings
 

@@ -1,5 +1,3 @@
-# from . import Dish, Ingredient, Customer, Order
-
 from . import Dish
 from . import Ingredient
 from . import Order

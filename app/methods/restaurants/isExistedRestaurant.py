@@ -1,5 +1,3 @@
-
-
 from app import db
 from app.models.Restaurant import Restaurant
 

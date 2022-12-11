@@ -1,5 +1,6 @@
-import app.models as models
 from app import db
+
+import app.models as models
 from app.methods.restaurants import getRestaurantViaLink
 from app.models.Restaurant import Restaurant
 
@@ -76,31 +77,5 @@ def getMenu(restaurant_link):
         for dish in category.dishes:
             dump_object["dishes"].append(dish.getInfo())
 
-
-    # print(dump_object)
-
-
-# def getBanners(restaurant_link):
-
-
-
-
-
-    # print(categories)
-    # for category in categories:
-    #     print(category.dishes)
-
-
-
-    # print(f"{rest = }")
-    # categories = db.session.query(models.Category.Category).all()
-    # categories_dump = []
-    # for category in categories:
-    #     categories_dump.append(category.getInfo())
-    #
-    # dishes = db.session.query(models.Dish.Dish).all()
-    # dishes_dump = []
-    # for dish in dishes:
-    #     dishes_dump.append(dish.getInfo())
 
     return dump_object

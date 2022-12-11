@@ -5,7 +5,6 @@ from app.methods import parseTitle
 class Ingredient(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, unique=True)
-    # dishes = db.relationship('Dish', secondary=dish_ingredient, backref='Ingredient')
 
     def __init__(self, title):
 

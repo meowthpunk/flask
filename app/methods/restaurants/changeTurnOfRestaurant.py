@@ -1,10 +1,5 @@
 from app.models.Restaurant import Restaurant
-# Restaurant = models.Restaurant.Restaurant
-# from PIL import Image
-# from app.settings import Settings
-#
 from app import db
-# from app.methods import isHexColorValid, allowedFile, fileSave, isPathValid
 
 def changeTurnOfRestaurant(id):
     restaurant = db.session.query(Restaurant).filter(Restaurant.id == id).first()
