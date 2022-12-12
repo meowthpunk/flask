@@ -33,13 +33,6 @@ class Category(db.Model):
 
         return category
 
-        #
-        # try:
-        #     category = Category(category)
-        # except:
-        #     return{"restaurant": restaurant,"error": "ALREADY_EXISTED"}
-        #
-        # return category
 
     def getInfo(self):
         return{

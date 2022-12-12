@@ -61,7 +61,7 @@ def createDish(dish, photo):
         dish_ingredients = None
 
         if "ingredients" in dish:
-            # print(dish["ingredients"])
+
             dish_ingredients = dish["ingredients"]
 
         dish = Dish.create(dish)
